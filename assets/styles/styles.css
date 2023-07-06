@@ -1,0 +1,1094 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+:root {
+    --nav-bg: #181818;
+}
+
+nav {
+    width: 100%;
+    padding: 16px 60px;
+    background-color: var(--nav-bg);
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+nav .container-fluid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-lt-block img {
+    width: 3.5em;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .nav-lt-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5em;
+}
+
+nav .nav-rt-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5em;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    transition: all 0.5s ease-in-out;
+}
+nav .nav-links  .nav-item{
+    padding: 8px 0;
+    cursor: pointer;
+    
+}
+nav .nav-links  .nav-item:hover{
+    border-bottom: 2px solid #fff;
+}
+nav .nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .nav-icons svg {
+    fill: #fff;
+    width: 1.6em;
+    height: 1.6em;
+}
+
+nav .nav-icons .menu-icon i {
+    font-size: 2em;
+}
+
+#hero {
+    width: 100%;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.hero-section {
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(at 85% 10%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%), url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/hero_banner/2023/05_05_birthday/slider_hp_01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-clip: border-box;
+}
+
+.hero-section svg {
+    width: 3.5em;
+    height: 4em;
+    fill: transparent;
+    stroke: #fff;
+    transition: all 0.1s ease-in;
+}
+
+.hero-section svg:hover {
+    fill: #fff;
+    stroke: transparent;
+}
+
+.hero-section svg:hover .icon {
+    stroke: black;
+}
+
+.hero-section .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero-section .container h1 {
+    font-size: 2.1em;
+    line-height: 0.5em;
+}
+
+.hero-section .container h2 {
+    font-size: 6.5em;
+    line-height: 1em;
+    font-weight: 600;
+}
+
+.hero-section .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.1em;
+}
+
+#slider-sect {
+    width: 100%;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+.slider-section {
+    position: relative;
+    height: 100vh;
+    min-height: 680px;
+    width: 100%;
+    display: inline-block;
+    background-color: #000;
+}
+
+.slider-section .slides {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    white-space: nowrap;
+    display: flex;
+    justify-content: end;
+}
+
+.slider-section .slides .slide {
+    height: 100%;
+    width: 30vw;
+    background-color: #000000e7;
+    transition: none;
+}
+
+.slider-section .slides .slide:last-child {
+    transition: all 1s ease;
+}
+
+.slider-section .slides .slide:nth-child(2) {
+    transition: all 1s ease;
+}
+
+.slider-section .slides .slide-dark img {
+    opacity: 0.2;
+}
+
+.slider-section .slides img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: 25%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.slider-section .slides .slide .skew {
+    position: relative;
+    -webkit-transform: skew(-20deg);
+    transform: skew(-20deg);
+    transform-origin: bottom left;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-section .slides .active {
+    width: 57vw;
+}
+
+.slider-section .slides .slide .skew .skew-fix {
+    -webkit-transform: skew(20deg);
+    transform: skew(20deg);
+    transform-origin: bottom left;
+    height: 100%;
+    width: 236%;
+    -webkit-background-position: center center;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-color: black;
+    position: relative;
+}
+
+.slider-section .content {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 3;
+    color: #fff;
+    gap: 70px;
+}
+
+.slider-section .content .top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.slider-section .content .top .title {
+    margin-left: 0.4em;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.slider-section .content svg {
+    width: 2.8em;
+    height: 2.8em;
+    stroke: #fff;
+    fill: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.slider-section .content svg:hover .icon {
+    stroke: #000;
+}
+
+.slider-section .content svg:hover {
+    fill: #fff;
+    stroke: transparent;
+}
+
+.slider-section .content .top .slide-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.slider-section .content .mid h1 {
+    font-size: 7.25em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    animation: fadeIn 1s;
+    transition: all 2s ease;
+}
+
+.slider-section .content .mid span {
+    margin-left: 0.2em;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 2s ease;
+}
+
+.slider-section .content .mid,
+.slider-section .content .bottom {
+    margin-left: 0.4em;
+}
+
+.slider-section .content .mid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1em;
+    transition: all 1s linear;
+}
+
+.slider-section .content .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.slider-section .content .bottom svg {
+    margin-left: -0.3em;
+}
+
+.slider-section .content .bottom span {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+#three-d-slider {
+    width: 100%;
+    font-size: 1rem;
+    padding-top: 40px;
+    margin-bottom: 80px;
+}
+
+.second-slider-section {
+    width: 100vw;
+    height: 70vh;
+    background-image: url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/model_choose/2023/urus_s_home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.6s ease;
+}
+
+.second-slider-section .content {
+    position: absolute;
+    left: 8%;
+    top: 20%;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 14px;
+}
+
+.second-slider-section .content span {
+    font-size: 2em;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.second-slider-section .content h2 {
+    font-size: 4.75em;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    line-height: 1.1em;
+    transition: all 0.2s ease;
+}
+@keyframes letterByLetter {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ } 
+.letter-by-letter-animation{
+    animation: letterByLetter 1s ease-in;
+}
+
+.second-slider-section .content svg {
+    width: 3.1em;
+    height: 3.5em;
+    fill: transparent;
+    stroke: #000;
+    margin-left: -0.4em;
+    margin-bottom: 40px;
+    transition: all 0.5s ease;
+}
+
+.second-slider-section .content svg:hover {
+    fill: #000;
+    stroke: #fff;
+}
+
+.second-slider-section .content .section-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.second-slider-section .content .section-links .link-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 65px 20px 0;
+    border-bottom: 0.14em solid #0000005c;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.second-slider-section .content .section-links .link-item:hover {
+    border-bottom: 0.14em solid #000000;
+
+}
+/* #three-d-slider-responsive{
+    width: 100%;
+}
+#three-d-slider-responsive .container-fluid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#three-d-slider-responsive .container-fluid .swiper{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+}
+#three-d-slider-responsive .container-fluid .swiper .swiper-col{
+    width: auto;
+}
+#three-d-slider-responsive .container-fluid .swiper .swiper-col img{
+    width: 650px;
+} */
+
+.section-gl {
+    width: 100vw;
+    height: 90vh;
+    font-size: 1rem;
+    background-image: url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/banner/533702.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-gl .container {
+    padding: 170px 0 0 0;
+    color: #fff;
+}
+
+.section-gl .container .row span {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.section-gl .container .row .col-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.section-gl .container .row h2 {
+    font-size: 4.5em;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.section-gl .container .row svg {
+    width: 3.5em;
+    height: 3.5em;
+    stroke: #fff;
+    fill: transparent;
+}
+
+.section-gl .container .row svg:hover {
+    fill: #fff;
+    stroke: transparent;
+}
+
+.section-gl .container .row svg:hover .icon {
+    stroke: #000;
+}
+
+#news {
+    width: 100%;
+    font-size: 1rem;
+    padding-top: 80px;
+}
+
+.news-section .head span {
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.news-section .head h1 {
+    font-size: 7em;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.news-section .img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.news-section .news-block img {
+    width: 100%;
+    height: 100%;
+}
+
+.news-section .img-desc .col-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 0 30px 0;
+    overflow: hidden;
+}
+
+.news-section .img-desc .col-12 .date {
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 0.6em;
+}
+
+.news-section .img-desc .col-12 .btn {
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: .6;
+    text-align: left;
+}
+
+.news-section .img-desc .description h2 {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 2em;
+}
+
+.news-section .img-desc .description span {
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 1em;
+    opacity: .6;
+}
+
+.news-section .img-desc .description .col-md-3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.news-section .img-desc .description .col-md-3 .btn {
+    padding: 10px;
+    width: 70%;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    border: 0.01em solid #0000003e;
+    border-radius: 0;
+}
+
+.news-section .news-block {
+    margin-top: 4em;
+}
+
+.news-section .news-block .col-md-6:first-child {
+    padding-right: 40px;
+}
+
+.news-section .news-block .col-md-6:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+
+.news-section .news-block .date {
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.news-section .news-block .block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.news-section .news-block .block h2 {
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.news-section .news-block .block span {
+    width: fit-content;
+    background-color: #f6f3ff;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 12px;
+}
+
+.news-section .news-block .btn {
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    width: 40%;
+    padding: 15px 0;
+    text-align: center;
+    border: 0.01em solid #0000003e;
+    border-radius: 0;
+    transition: all 0.4s ease;
+}
+
+.news-section .news-block .btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.news-section .row:last-child .col-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 100px 0;
+}
+
+.news-section .row:last-child .btn {
+    padding: 12px 70px;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    border-radius: 0;
+    transition: all 0.4s ease;
+}
+
+.news-section .row:last-child .btn:hover {
+    color: #000;
+    border: 0.01em solid #000000d9;
+    background-color: transparent;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--nav-bg);
+    color: #fff;
+    font-size: 1rem;
+}
+
+footer .container-fluid {
+    padding: 60px 40px 60px 40px;
+}
+
+footer .foot-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+footer .container-fluid .footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+footer .container-fluid .icons-col {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+footer .container-fluid .icons-col .icons-row {
+    display: flex;
+    gap: 10px;
+}
+
+footer .container-fluid .icons-col .icons-row i {
+    font-size: 1.5em;
+}
+
+footer .container-fluid .footer-links .links {
+    display: flex;
+    gap: 1.2em;
+}
+
+footer .container-fluid .row .text {
+    font-size: 0.8em;
+    letter-spacing: 0.02em;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+footer .container-fluid .row .copyright {
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+#fixed-foot {
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+    color: #fff;
+    background-color: #000000ef;
+    padding: 2px 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+}
+
+
+@media only screen and (max-width:1200px) {
+    nav {
+        padding: 16px 10px;
+    }
+
+    nav .nav-links {
+        gap: 1em;
+    }
+
+    nav .nav-icons {
+        gap: 1.5em;
+    }
+
+    nav .nav-rt-block,
+    nav .nav-lt-block {
+        gap: 3em;
+    }
+
+    nav .nav-links .nav-item {
+        font-size: 0.8em;
+    }
+
+    .news-section .head h1 {
+        font-size: 5.5em;
+    }
+
+    .hero-section .container h2 {
+        font-size: 5em;
+    }
+
+    .second-slider-section {
+        height: 56vh;
+    }
+
+    .section-gl .container .row span {
+        font-size: 1.8em;
+    }
+
+    .section-gl .container .row h2 {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    nav .nav-links {
+        display: none;
+    }
+
+    nav .nav-lt-block img {
+        width: 2.5em;
+    }
+
+    .hero-section {
+        height: 90vh;
+    }
+
+    .slider-section {
+        min-height: 400px;
+        height: 70vh;
+    }
+
+    .slider-section .slides .slide {
+        width: 20vw;
+    }
+
+    .slider-section .slides .active {
+        width: 80vw;
+    }
+
+    .slider-section .content {
+        gap: 30px;
+    }
+
+    .slider-section .content .mid {
+        line-height: 0.5em;
+    }
+
+    .slider-section .content .mid h1 {
+        font-size: 6em;
+    }
+
+    .slider-section .content .mid span,
+    .slider-section .content .top .title {
+        font-size: 1.8em;
+    }
+    .second-slider-section{
+        height:46vh;
+    }
+    .second-slider-section .content{
+        gap: 2px;
+    }
+    .second-slider-section .content span{
+        font-size: 1.5em;
+    }
+    .second-slider-section .content h2{
+        font-size: 3.5em;
+    }
+    .section-gl {
+        height: 80vh;
+    }
+
+    .section-gl .container .row span {
+        font-size: 1.5em;
+    }
+
+    .section-gl .container .row h2 {
+        font-size: 3.5em;
+    }
+
+    .section-gl .container .row svg {
+        width: 3em;
+        height: 3em;
+    }
+
+    #news .container {
+        max-width: 900px;
+    }
+
+    .news-section .head h1 {
+        font-size: 4em;
+    }
+
+    .news-section .img-desc .description span {
+        display: none;
+    }
+
+    .news-section .img-desc .description h2,
+    .news-section .news-block .block h2 {
+        font-size: 1.5em;
+    }
+
+    footer .container-fluid .footer-links .links {
+        display: flex;
+        gap: .8em;
+        flex-direction: column;
+    }
+
+    footer .container-fluid .icons-col {
+        margin-top: 20px;
+    }
+
+    #fixed-foot .text {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .hero-section .container h2 {
+        font-size: 3em;
+    }
+
+    .hero-section .container h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-section svg {
+        width: 2.5em;
+        height: 3em;
+    }
+
+    .slider-section {
+        height: 50vh;
+    }
+
+    .slider-section .slides .slide {
+        width: 30vw;
+    }
+
+    .slider-section .slides .active {
+        width: 90vw;
+    }
+
+    .slider-section .content {
+        gap: 40px;
+    }
+
+    .slider-section .content .mid {
+        line-height: 0.3em;
+    }
+
+    .slider-section .content .mid h1 {
+        font-size: 3em;
+    }
+
+    .slider-section .content .mid span,
+    .slider-section .content .top .title {
+        font-size: 1em;
+    }
+    .second-slider-section{
+        height: 30vh;
+    }
+    .second-slider-section .content span{
+        font-size: 1.2em;
+    }
+    .second-slider-section .content h2{
+        font-size: 3em;
+    }
+    .section-gl {
+        height: 80vh;
+    }
+    .section-gl {
+        height: 70vh;
+    }
+
+    .section-gl .container .row span {
+        font-size: 1.2em;
+    }
+
+    .section-gl .container .row h2 {
+        font-size: 3em;
+    }
+
+    .news-section .head span {
+        font-size: 1.5em;
+    }
+
+    .news-section .head h1 {
+        font-size: 3.5em;
+    }
+
+    #news .container {
+        max-width: 750px;
+    }
+
+    .news-section .img-desc .col-12 {
+        padding: 20px 0 0 0;
+    }
+
+    .news-section .img-desc .description .col-sm-0 {
+        display: none;
+    }
+
+    .news-section .news-block {
+        margin-top: 1.5em;
+    }
+
+    .news-section .news-block .btn {
+        display: none;
+    }
+
+    .news-section .news-block .col-md-6:first-child {
+        padding-right: 20px;
+    }
+
+    .news-section .row:last-child .col-12 {
+        padding: 40px 20px;
+    }
+
+    .news-section .row:last-child .btn {
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .container-fluid .footer-links .links {
+        display: flex;
+        gap: 0.6em;
+        flex-direction: column;
+    }
+
+    #fixed-foot .text {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .hero-section .container h2 {
+        font-size: 2.2em;
+    }
+
+    .hero-section .container h1 {
+        font-size: 1.2em;
+    }
+
+    .section-gl {
+        height: 50vh;
+    }
+
+    .section-gl .container {
+        padding: 80px 0 0 30px;
+    }
+
+    .section-gl .container .row .col-12 {
+        gap: 15px;
+    }
+
+    .section-gl .container .row span {
+        font-size: 1.2em;
+    }
+
+    .section-gl .container .row h2 {
+        font-size: 2.2em;
+    }
+
+    .section-gl .container .row svg {
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .second-slider-section .content span{
+        font-size: 1em;
+    }
+    .second-slider-section .content h2{
+        font-size: 2em;
+    }
+    .second-slider-section .content svg{
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .second-slider-section .content{
+        gap: 0px;
+    }
+    .second-slider-section .content .section-links{
+        margin-top: 3em;
+    }
+    .second-slider-section .content .section-links .link-item{
+        padding: 0 40px 8px 0;
+    }
+    .second-slider-section .content .section-links .link-item{
+        font-size: 1em;
+    }
+    .news-section .head span {
+        font-size: 1em;
+    }
+
+    .news-section .head h1 {
+        font-size: 2.5em;
+    }
+
+    #fixed-foot .text {
+        font-size: 0.7em;
+    }
+}
