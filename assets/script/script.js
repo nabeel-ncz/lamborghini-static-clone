@@ -7,6 +7,21 @@ const slidesBtnLeft = document.getElementById("slide-btn-l");
 const carModel = document.getElementById("car-model-txt");
 const carData = document.getElementById("car-data-txt");
 
+const openNav = document.getElementById('nav-bottom-open');
+const menuIcon = document.getElementById('menu-icon');
+
+menuIcon.addEventListener('click',()=>{
+    openNav.classList.toggle('d-none')
+    const icon = document.getElementById('hmb-ico');
+    if(icon.classList.contains('bx-menu')){
+        icon.classList.remove('bx-menu');
+        icon.classList.add('bx-x');
+    }else if(icon.classList.contains('bx-x')){
+        icon.classList.remove('bx-x');
+        icon.classList.add('bx-menu');
+    }
+})
+
 
 slidesBtnRight.addEventListener("click", () => {
     let last = slides.lastElementChild;
